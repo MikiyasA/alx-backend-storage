@@ -6,6 +6,8 @@ import pymongo
 
 
 def top_students(mongo_collection):
+    """ average score must be part of each item returns with key = averageScore
+    """
     return mongo_collection.aggregate([
         { "$addFields":
           {"name": "name",
